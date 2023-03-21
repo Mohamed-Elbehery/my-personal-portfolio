@@ -37,7 +37,7 @@ li {
 
 /* Main Code */
 main {
-  width: 60%;
+  width: 85%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -57,16 +57,19 @@ main .info {
 
 main .info .about-me h1 {
   margin-bottom: 1.725rem;
+  font-size: 1.5rem;
 }
 
 main .info .about-me span {
   background-color: #333;
   padding: 0.5rem 0.85rem;
   border-radius: 0.5rem;
+  display: inline-block;
+  line-height: 1.5;
 }
 
 main .info hr {
-  width: 80%;
+  max-width: 70%;
   margin: 0 auto;
   margin-top: 2rem;
   border-color: #000;
@@ -117,6 +120,6 @@ main .contacts .social-links i {
 }
 
 main .main-content {
-  flex: 3;
+  flex: 4;
   background-color: white;
 }
