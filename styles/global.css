@@ -1,0 +1,122 @@
+/* Variables */
+:root {
+  --smoky-black: rgb(18, 18, 18);
+  --wheat-color: rgb(241, 233, 219);
+  --section-background: #222;
+  --main-color: #fec966;
+}
+
+/* Global Rules */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: var(--wheat-color);
+}
+
+#particles-js {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--smoky-black);
+  z-index: -1;
+  position: fixed;
+}
+
+a,
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+/* Main Code */
+main {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding-top: 4rem;
+}
+
+main .info {
+  flex: 1;
+  background-color: var(--section-background);
+  border-radius: 2rem;
+  padding: 1.325rem;
+  padding-top: 3rem;
+  border: 1px solid #444;
+  text-align: center;
+  z-index: 10;
+}
+
+main .info .about-me h1 {
+  margin-bottom: 1.725rem;
+}
+
+main .info .about-me span {
+  background-color: #333;
+  padding: 0.5rem 0.85rem;
+  border-radius: 0.5rem;
+}
+
+main .info hr {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  border-color: #000;
+}
+
+main .contacts > div {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+main .contacts > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+main .contacts > div > div span {
+  color: gray;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+main .contacts > div > i {
+  position: relative;
+  color: var(--main-color);
+  padding: 0.75rem 0.9rem;
+  border: 2px solid;
+  border-image: linear-gradient(-50deg, #222, #333) 1;
+}
+
+main .contacts .social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .contacts .social-links i {
+  color: var(--main-color);
+  padding: 0.5rem;
+  border: 2px solid;
+  border-image: linear-gradient(45deg, #222, #333) 1;
+}
+
+main .main-content {
+  flex: 3;
+  background-color: white;
+}
