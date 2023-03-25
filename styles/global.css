@@ -143,15 +143,15 @@ main .info .about-me span {
   }
 }
 
-main .contacts > div {
+main .contacts > div > div {
   display: flex;
   align-items: center;
   text-align: left;
-  gap: 1rem;
+  gap: 1.25rem;
   margin-top: 2rem;
 }
 
-main .contacts > div > div {
+main .contacts > div > div > div {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -159,14 +159,14 @@ main .contacts > div > div {
   font-weight: normal;
 }
 
-main .contacts > div > div span {
+main .contacts > div > div > div span {
   color: gray;
   font-size: 0.75rem;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-main .contacts > div > i {
+main .contacts > div > div > i {
   position: relative;
   color: var(--main-color);
   padding: 0.75rem 0.9rem;
@@ -179,6 +179,7 @@ main .contacts .social-links {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  margin-top: 2rem;
 }
 
 main .contacts .social-links i {
@@ -252,5 +253,19 @@ main .main-content {
   main .main-content {
     width: 100%;
     margin: 2rem 0;
+  }
+
+  main .contacts .contacts-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  main .contacts > div > div {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 1.25rem;
+    margin-top: 2rem;
+    width: 50%;
   }
 }
