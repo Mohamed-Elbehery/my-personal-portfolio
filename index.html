@@ -20,13 +20,19 @@
     </div>
     <!--! Main Code -->
     <main>
-      <div class="info">
+      <aside class="info">
+        <button class="show-info"></button>
         <div class="about-me">
-          <h1>Mohamed Ahmed</h1>
-          <span>Front-End Developer</span>
+          <div>
+            <img src="./assets/my-photo.jpeg" alt="my-photo" />
+          </div>
+          <div>
+            <h1>Mohamed Ahmed</h1>
+            <span>Front-End Developer</span>
+          </div>
         </div>
-        <hr />
         <div class="contacts">
+          <hr />
           <div>
             <i class="fa-solid fa-envelope"></i>
             <div>
@@ -54,10 +60,29 @@
             <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
           </div>
         </div>
-      </div>
-      <section class="main-content"></section>
+      </aside>
+      <section class="main-content">
+        <article class="about">
+          <div class="main-title">
+            <h1>About Me</h1>
+          </div>
+          <nav>
+            <ul>
+              <li><a class="active" href="#about">About</a></li>
+              <li><a href="#resume">Resume</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </article>
+      </section>
     </main>
     <!--! Linking Particles scripts -->
+    <script src="./script/jquery-3.6.4.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/77380724c1.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./script/particles.js"></script>
     <script src="./script/app.js"></script>
     <!-- Font Awesome -->
@@ -65,5 +90,6 @@
       src="https://kit.fontawesome.com/77380724c1.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./script/script.js"></script>
   </body>
 </html>
