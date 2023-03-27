@@ -1,12 +1,22 @@
-/* Variables */
+/*! Variables */
 :root {
   --smoky-black: rgb(18, 18, 18);
   --wheat-color: rgb(241, 233, 219);
-  --section-background: #222;
-  --main-color: #fec966;
+  --section-background: rgb(28, 28, 28);
+  --main-color: rgb(254, 184, 36);
+  --main-color-links: rgb(255, 219, 112);
+  --article-padding: 3rem;
+  --p-color: #bdbdbd;
+  --border-style: linear-gradient(
+      -50deg,
+      rgb(77, 77, 77),
+      rgb(44, 44, 44),
+      rgb(34, 34, 34)
+    )
+    1;
 }
 
-/* Global Rules */
+/*! Global Rules */
 * {
   margin: 0;
   padding: 0;
@@ -35,9 +45,13 @@ li {
   list-style: none;
 }
 
-article {
+.container {
   position: relative;
+}
+
+article {
   padding: 2rem;
+  display: none;
 }
 
 .main-title h1 {
@@ -56,15 +70,17 @@ article {
 }
 
 nav {
+  position: absolute;
+  inset: 0rem 0rem auto auto;
   border-top-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
   border-top: none;
   border-right: none;
-  position: absolute;
-  inset: 0rem 0rem auto auto;
   padding: 1.25rem 3.125rem;
-  background-color: #333;
-  border: 1px solid #444;
+  background-color: rgb(40, 40, 40);
+  border: 1px solid #333;
+  z-index: 999;
+  display: none;
 }
 
 nav ul {
@@ -79,14 +95,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: var(--main-color);
+  color: var(--main-color-links);
 }
 
 nav ul li a.active {
-  color: var(--main-color);
+  color: var(--main-color-links);
 }
 
-/* Main Code */
+/*! Main Code */
 main {
   position: relative;
   width: 80%;
@@ -95,7 +111,8 @@ main {
   padding-top: 2rem;
 }
 
-main .info {
+/* Sidebar */
+main aside {
   background-color: var(--section-background);
   border-radius: 2rem;
   padding: 1.325rem;
@@ -105,42 +122,37 @@ main .info {
   z-index: 10;
   transition: 0.35s ease;
   height: fit-content;
+  margin-bottom: 2rem;
 }
 
-main .info .show-info {
+main aside .show-info {
   display: none;
 }
 
-main .info hr {
+main aside hr {
   max-width: 70%;
   margin: 0 auto;
   margin-top: 2rem;
   border-color: #000;
 }
 
-main .info div img {
+main aside div img {
   width: 10rem;
   border-radius: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-main .info .about-me h1 {
+main aside .about-me h1 {
   margin-bottom: 1.725rem;
   font-size: 1.5rem;
 }
 
-main .info .about-me span {
+main aside .about-me span {
   background-color: #333;
   padding: 0.5rem 0.85rem;
   border-radius: 0.5rem;
   display: inline-block;
   line-height: 1.5;
-}
-
-@media screen and (min-width: 1365px) {
-  main .contacts {
-    display: block !important;
-  }
 }
 
 main .contacts > div > div {
@@ -166,12 +178,21 @@ main .contacts > div > div > div span {
   text-transform: uppercase;
 }
 
+main .contacts > div > div > div a {
+  transition: 0.35s ease;
+  font-size: 0.85rem;
+}
+
+main .contacts > div > div > div a:hover {
+  color: var(--main-color-links);
+}
+
 main .contacts > div > div > i {
   position: relative;
-  color: var(--main-color);
+  color: var(--main-color-links);
   padding: 0.75rem 0.9rem;
   border: 2px solid;
-  border-image: linear-gradient(-50deg, #222, #333) 1;
+  border-image: var(--border-style);
 }
 
 main .contacts .social-links {
@@ -183,22 +204,57 @@ main .contacts .social-links {
 }
 
 main .contacts .social-links i {
-  color: var(--main-color);
+  color: var(--main-color-links);
   padding: 0.5rem;
   border: 2px solid;
-  border-image: linear-gradient(45deg, #222, #333) 1;
+  border-image: var(--border-style);
+  transition: 0.35s ease;
 }
 
+main .contacts .social-links i:hover {
+  color: var(--main-color);
+}
+
+/* Articles */
 main .main-content {
-  width: 1100px;
+  position: relative;
+  width: 850px;
   background-color: var(--section-background);
-  height: 80vh;
   border-radius: 1rem;
   border: 1px solid #444;
   margin-left: 2.5rem;
 }
 
+/* About Article */
+main article.about .about-info {
+  padding-top: var(--article-padding);
+}
+
+main article.about .about-info p {
+  line-height: 1.7;
+  color: var(--p-color);
+  font-size: 1rem;
+}
+
+main article.about .about-info p:not(:first-child) {
+  margin-top: 0.9rem;
+}
+
+/*! Media Queries */
 @media screen and (max-width: 1365px) {
+  main .contacts {
+    display: block !important;
+  }
+
+  .container article {
+    margin: 0 !important;
+  }
+
+  .container {
+    width: 100%;
+    margin-top: 2.5rem;
+  }
+
   main {
     flex-direction: column;
     align-items: center;
@@ -208,12 +264,13 @@ main .main-content {
     display: none;
   }
 
-  main .info {
+  main aside {
     width: 100%;
-    padding: 1.5rem;
+    padding: 2rem 1rem;
+    margin-bottom: 0;
   }
 
-  main .info .show-info {
+  main aside .show-info {
     display: block;
     position: absolute;
     right: 0rem;
@@ -229,23 +286,23 @@ main .main-content {
     font-size: 0.9rem;
   }
 
-  main .info .show-info i {
+  main aside .show-info i {
     font-size: 0.8rem;
     color: var(--main-color);
     margin-left: 0.5rem;
   }
 
-  main .info .show-info:hover {
+  main aside .show-info:hover {
     background: linear-gradient(-30deg, #333, #333, rgba(254, 201, 102, 0.7));
   }
 
-  main .info .about-me {
+  main aside .about-me {
     display: flex;
     align-items: center;
     gap: 1.5rem;
   }
 
-  main .info .about-me div img {
+  main aside .about-me div img {
     width: 8rem;
     margin-bottom: 0;
   }
@@ -260,12 +317,71 @@ main .main-content {
     flex-wrap: wrap;
   }
 
+  main .contacts .contacts-container > div {
+    display: flex;
+    width: 50%;
+  }
+
   main .contacts > div > div {
     display: flex;
     align-items: center;
     text-align: left;
     gap: 1.25rem;
     margin-top: 2rem;
-    width: 50%;
+    width: 100%;
+  }
+
+  nav {
+    position: fixed;
+    inset: auto 0 0 0;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 0;
+    background-color: rgba(55, 55, 55, 0.6);
+  }
+
+  nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main-title h1::before {
+    width: 10%;
+  }
+
+  main .contacts .contacts-container {
+    flex-wrap: wrap;
+  }
+
+  main .contacts .contacts-container > div {
+    width: 100%;
+    justify-content: left;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  html {
+    font-size: 12px;
+  }
+
+  main .contacts .contacts-container > div {
+    width: 100%;
+  }
+
+  main aside .about-me {
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-title h1::before {
+    width: 12.5%;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  main .main-content {
+    width: 1100px;
   }
 }
