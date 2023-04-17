@@ -226,6 +226,10 @@ main .main-content {
 }
 
 /* About Article */
+main article.about .about-exp + h2 {
+  margin-bottom: 1.325rem;
+}
+
 main article.about .about-info {
   padding-top: var(--article-padding);
 }
@@ -240,12 +244,64 @@ main article.about .about-info p:not(:first-child) {
   margin-top: 0.9rem;
 }
 
+main article.about .about-exp {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  gap: 1.125rem;
+  margin: 1.325rem 0;
+}
+
+main article.about .about-work {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.125rem;
+  margin: 1.325rem 0;
+}
+
+main article.about .about-exp .box,
+main article.about .about-work .box {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  border: 2px solid;
+  border-image: var(--border-style);
+  padding: 0.9rem 1rem;
+}
+
+main article.about .about-exp .box div:has(h3),
+main article.about .about-work .box div:has(h3) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main article.about .about-exp .box i,
+main article.about .about-work .box i {
+  color: var(--main-color-links);
+  font-size: 2rem;
+}
+
+main article.about .about-exp .box h3,
+main article.about .about-work .box h3 {
+  font-size: 1.5rem;
+  align-self: flex-start;
+  margin-bottom: 0.25rem;
+}
+
+main article.about .about-exp .box p,
+main article.about .about-work .box p {
+  width: 85%;
+  line-height: 1.45;
+  font-size: 0.95rem;
+  color: var(--p-color);
+}
+
+main article.about .about-work .box p {
+  width: 100%;
+}
+
 /*! Media Queries */
 @media screen and (max-width: 1365px) {
-  main .contacts {
-    display: block !important;
-  }
-
   .container article {
     margin: 0 !important;
   }
@@ -383,5 +439,9 @@ main article.about .about-info p:not(:first-child) {
 @media screen and (min-width: 1700px) {
   main .main-content {
     width: 1100px;
+  }
+
+  main .contacts {
+    display: block !important;
   }
 }
