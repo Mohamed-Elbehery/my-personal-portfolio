@@ -401,6 +401,12 @@ main article.about .about-work .box p {
   }
 }
 
+@media screen and (min-width: 1366px) {
+  main .contacts {
+    display: block !important;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .main-title h1::before {
     width: 10%;
@@ -434,14 +440,35 @@ main article.about .about-work .box p {
   .main-title h1::before {
     width: 12.5%;
   }
+  main article.about .about-exp,
+  main article.about .about-work {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  main article.about .about-exp p,
+  main article.about .about-work p {
+    width: 100%;
+  }
+
+  main article.about .about-exp .box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main article.about .about-exp .box div:has(h3) {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  main article.about .about-exp .box div:has(h3) p,
+  main article.about .about-work .box div:has(h3) p {
+    font-size: 1.1rem;
+    margin-top: 0.25rem;
+  }
 }
 
 @media screen and (min-width: 1700px) {
   main .main-content {
     width: 1100px;
-  }
-
-  main .contacts {
-    display: block !important;
   }
 }
