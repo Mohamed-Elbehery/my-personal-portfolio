@@ -23,13 +23,13 @@ $(document).ready(() => {
       $(".show-info").html() ==
       `Show Contacts <i class="fa-solid fa-angle-down"></i>`
     ) {
-      $(".contacts").toggle(250);
+      $(".contacts").slideToggle(250);
       $(".show-info").html(
         `Show Contacts <i class="fa-solid fa-angle-up"></i>`
       );
     } else {
       // will switch the icon to the opposite of it
-      $(".contacts").toggle(250);
+      $(".contacts").slideToggle(250);
       $(".show-info").html(
         `Show Contacts <i class="fa-solid fa-angle-down"></i>`
       );
