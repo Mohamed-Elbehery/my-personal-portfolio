@@ -14,17 +14,17 @@ particlesJS.load('particles-js', 'particles.json', function() {
 particlesJS("particles-js", {
   particles: {
     number: {
-      value: 290,
+      value: 200,
       density: {
         enable: true,
-        value_area: 1500,
+        value_area: 800,
       },
     },
     color: {
-      value: "#ccc",
+      value: "#fec966",
     },
     shape: {
-      type: "triangle",
+      type: "circle",
       stroke: {
         width: 0,
         color: "#000000",
@@ -34,8 +34,8 @@ particlesJS("particles-js", {
       },
       image: {
         src: "img/github.svg",
-        width: 100,
-        height: 100,
+        width: 50,
+        height: 50,
       },
     },
     opacity: {
@@ -49,7 +49,7 @@ particlesJS("particles-js", {
       },
     },
     size: {
-      value: 3,
+      value: 7,
       random: true,
       anim: {
         enable: false,
@@ -60,14 +60,14 @@ particlesJS("particles-js", {
     },
     line_linked: {
       enable: true,
-      distance: 150,
+      distance: 0,
       color: "#fec966",
-      opacity: 0.4,
+      opacity: 1,
       width: 1,
     },
     move: {
       enable: true,
-      speed: 3,
+      speed: 5,
       direction: "none",
       random: true,
       straight: false,
