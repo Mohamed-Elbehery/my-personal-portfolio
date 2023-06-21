@@ -59,6 +59,10 @@ $(document).ready(() => {
         setTimeout(() => {
           $("#submit-form").html("Send Message");
         }, 3000);
+      })
+      .catch((err) => {
+        console.error(err);
+        $("#submit-form").html("Try Again Later!!");
       });
   });
 });
