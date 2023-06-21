@@ -511,6 +511,10 @@ main article.contact form button i {
 
 /*! Media Queries */
 @media screen and (max-width: 1365px) {
+  body {
+    padding-bottom: 6rem;
+  }
+
   .container article {
     margin: 0 !important;
   }
