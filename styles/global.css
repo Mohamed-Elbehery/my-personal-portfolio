@@ -300,6 +300,155 @@ main article.about .about-work .box p {
   width: 100%;
 }
 
+/* Resume Articles */
+
+main article.resume .education,
+main article.resume .experience {
+  padding-top: 3.5rem;
+}
+
+main article.resume .education h1,
+main article.resume .experience h1 {
+  display: flex;
+  align-items: center;
+  font-size: 1.75rem;
+  position: relative;
+  margin-left: 3.5rem;
+}
+
+main article.resume .education svg,
+main article.resume .experience svg {
+  width: 2.75rem;
+  border: 2px solid;
+  border-image: var(--border-style);
+  padding: 0.375rem;
+  position: absolute;
+  inset: 50% 102% auto auto;
+  transform: translateY(-50%);
+}
+
+main article.resume .education ul,
+main article.resume .experience ul {
+  margin-left: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+main article.resume .education ul li:first-child,
+main article.resume .experience ul li:first-child {
+  font-weight: bold;
+  margin-top: 2rem;
+  position: relative;
+}
+
+main article.resume .education ul li:first-child::before,
+main article.resume .experience ul li:first-child::before {
+  content: "";
+  position: absolute;
+  inset: 50% auto auto -4.75%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  border: 3px solid rgba(95, 95, 95, 0.85);
+  background-color: var(--main-color);
+  padding: 0.125rem;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  main article.resume .education ul li:first-child::before,
+  main article.resume .experience ul li:first-child::before {
+    inset: 50% auto auto -7.5%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  main article.resume .education ul li:first-child::before,
+  main article.resume .experience ul li:first-child::before {
+    inset: 50% auto auto -8.5%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main article.resume .education ul li:first-child::before,
+  main article.resume .experience ul li:first-child::before {
+    inset: 50% auto auto -10%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main article.resume .education ul li:first-child::before,
+  main article.resume .experience ul li:first-child::before {
+    inset: 50% auto auto -11.5%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main article.resume .education ul li:first-child::before,
+  main article.resume .experience ul li:first-child::before {
+    inset: 50% auto auto -13%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main article.resume .education ul li:first-child::before,
+  main article.resume .experience ul li:first-child::before {
+    inset: 50% auto auto -16%;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  main article.resume .education ul li:first-child::before,
+  main article.resume .experience ul li:first-child::before {
+    inset: 50% auto auto -19%;
+  }
+}
+
+main article.resume .education ul li:nth-child(2),
+main article.resume .experience ul li:nth-child(2) {
+  color: var(--main-color);
+  font-size: 0.9rem;
+}
+
+main article.resume .education ul li:last-child,
+main article.resume .experience ul li:last-child {
+  color: var(--p-color);
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+main article.resume .skills h1 {
+  text-align: center;
+  margin: 3rem 0;
+  font-size: 1.5rem;
+}
+
+main article.resume .skills .skills-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  width: 85%;
+  margin: 0 auto;
+}
+
+main article.resume .skills .skills-container .skills-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 300;
+  width: 6rem;
+}
+
+main article.resume .skills .skills-container .skills-item i {
+  font-size: 3rem;
+  color: var(--main-color);
+}
+
 /* Contact Articles */
 main article.contact h1 {
   margin-top: 1rem;
@@ -347,6 +496,17 @@ main article.contact form button {
 
 main article.contact form button i {
   color: var(--main-color-links);
+}
+
+@media screen and (max-width: 413px) {
+  main article.contact form div {
+    display: block;
+  }
+
+  main article.contact form div input {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
 }
 
 /*! Media Queries */
