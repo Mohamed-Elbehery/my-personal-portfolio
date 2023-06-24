@@ -11,6 +11,16 @@
     />
     <!-- Main CSS File -->
     <link rel="stylesheet" href="./styles/global.css" />
+    <!-- Email JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      window.onload = () => {
+        emailjs.init("7ayvEk0J2UudqMQ8m");
+      };
+    </script>
     <title>Portfolio</title>
   </head>
   <body>
@@ -372,19 +382,9 @@
       src="https://kit.fontawesome.com/77380724c1.js"
       crossorigin="anonymous"
     ></script>
-    <!-- Email JS -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("TdwoZ6H40X-BKh82r");
-      })();
-    </script>
+    <!-- Main Script File -->
+    <script type="text/javascript" src="./script/script.js"></script>
     <!-- Box Icons -->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <!-- Main Script File -->
-    <script src="./script/script.js"></script>
   </body>
 </html>
