@@ -37,7 +37,36 @@ $(document).ready(() => {
   });
 
   // Handling Contact Form
-  $("form").submit(() => {
+  $("form").submit((e) => {
+    e.preventDefault();
     $("#submit-form").html("Sending...");
+
+    const userQuery = {
+      name: $("#user-fullname").val(),
+      email: $("#user-email").val(),
+      message: $("#user-message").val(),
+    };
+
+    Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: "dev.elbehery@gmail.com",
+      Password: "61D57C9487D1BC488625AF4557DC5962A8A0",
+      To: "dev.elbehery@gmail.com",
+      From: userQuery.email,
+      Subject: "New Contact Query",
+      Body: `Name: ${userQuery.name} <br /> Email: ${userQuery.email} <br /> Message: ${userQuery.message} <br />`,
+    })
+      .then((_) => {
+        $("#submit-form").html("Submitted");
+        $("#user-fullname").val("");
+        $("#user-email").val("");
+        $("#user-message").val("");
+        setTimeout(() => {
+          $("#submit-form").html(
+            `<i class="fa-solid fa-paper-plane"></i> Send Message`
+          );
+        }, 2000);
+      })
+      .catch((err) => console.error(err));
   });
 });
