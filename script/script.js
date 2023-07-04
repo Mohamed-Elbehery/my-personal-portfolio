@@ -35,4 +35,9 @@ $(document).ready(() => {
       );
     }
   });
+
+  // Handling Contact Form
+  $("form").submit(() => {
+    $("#submit-form").html("Sending...");
+  });
 });
