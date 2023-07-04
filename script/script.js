@@ -35,34 +35,4 @@ $(document).ready(() => {
       );
     }
   });
-
-  // Handling Contact Form
-  $("form").submit((e) => {
-    e.preventDefault();
-    $("#submit-form").html("Sending...");
-
-    const userQuery = {
-      name: $("#user-fullname").val(),
-      email: $("#user-email").val(),
-      message: $("#user-message").val(),
-    };
-
-    emailjs
-      .send("service_mgmott9", "template_4zv6xko", userQuery)
-      .then(() => {
-        $("#user-fullname").val("");
-        $("#user-email").val("");
-        $("#user-message").val("");
-        $("#submit-form").html("Successfuly Submitted");
-      })
-      .then(() => {
-        setTimeout(() => {
-          $("#submit-form").html("Send Message");
-        }, 3000);
-      })
-      .catch((err) => {
-        console.error(err);
-        $("#submit-form").html("Try Again Later!!");
-      });
-  });
 });

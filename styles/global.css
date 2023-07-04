@@ -329,7 +329,7 @@ main article.resume .experience svg {
 
 main article.resume .education ul,
 main article.resume .experience ul {
-  margin-left: 3.5rem;
+  padding-left: 3.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -346,62 +346,40 @@ main article.resume .education ul li:first-child::before,
 main article.resume .experience ul li:first-child::before {
   content: "";
   position: absolute;
-  inset: 50% auto auto -4.75%;
-  transform: translateY(-50%);
-  width: 5px;
-  height: 5px;
-  border: 3px solid rgba(95, 95, 95, 0.85);
+  inset: 0.5px auto auto -45px;
+  width: 4px;
+  height: 4px;
+  border: 3px solid rgb(65, 65, 65);
   background-color: var(--main-color);
   padding: 0.125rem;
   border-radius: 50%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1680px) {
   main article.resume .education ul li:first-child::before,
   main article.resume .experience ul li:first-child::before {
-    inset: 50% auto auto -7.5%;
+    left: -41px;
   }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 830px) {
   main article.resume .education ul li:first-child::before,
   main article.resume .experience ul li:first-child::before {
-    inset: 50% auto auto -8.5%;
+    left: -37px;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 550px) {
   main article.resume .education ul li:first-child::before,
   main article.resume .experience ul li:first-child::before {
-    inset: 50% auto auto -10%;
+    left: -27.5px;
   }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 360px) {
   main article.resume .education ul li:first-child::before,
   main article.resume .experience ul li:first-child::before {
-    inset: 50% auto auto -11.5%;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  main article.resume .education ul li:first-child::before,
-  main article.resume .experience ul li:first-child::before {
-    inset: 50% auto auto -13%;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main article.resume .education ul li:first-child::before,
-  main article.resume .experience ul li:first-child::before {
-    inset: 50% auto auto -16%;
-  }
-}
-
-@media screen and (max-width: 280px) {
-  main article.resume .education ul li:first-child::before,
-  main article.resume .experience ul li:first-child::before {
-    inset: 50% auto auto -19%;
+    left: -25px;
   }
 }
 

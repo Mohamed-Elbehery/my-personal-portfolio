@@ -11,17 +11,8 @@
     />
     <!-- Main CSS File -->
     <link rel="stylesheet" href="./styles/global.css" />
-    <!-- Email JS -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      window.onload = () => {
-        emailjs.init("7ayvEk0J2UudqMQ8m");
-      };
-    </script>
-    <title>Portfolio</title>
+    <!-- Page Title -->
+    <title>Mohamed Ahmed - Portfolio</title>
   </head>
   <body>
     <!--! Particles -->
@@ -359,12 +350,31 @@
             </style>
           </div>
           <h1>Contact Me</h1>
-          <form>
+          <form
+            action="https://formsubmit.co/08460e1a1601b1adf0d79a8b7b4e7b62"
+            method="POST"
+          >
             <div>
-              <input id="user-fullname" type="text" placeholder="Full Name" />
-              <input id="user-email" type="email" placeholder="Email Address" />
+              <input
+                id="user-fullname"
+                type="text"
+                placeholder="Full Name"
+                name="fullname"
+                required
+              />
+              <input
+                id="user-email"
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
             </div>
-            <textarea id="user-message" placeholder="Your Message"></textarea>
+            <textarea
+              name="message"
+              id="user-message"
+              placeholder="Your Message"
+            ></textarea>
             <button id="submit-form">
               <i class="fa-solid fa-paper-plane"></i> Send Message
             </button>
@@ -377,14 +387,24 @@
     <script src="./script/jquery-3.6.4.min.js"></script>
     <script src="./script/particles.js"></script>
     <script src="./script/app.js"></script>
-    <!-- Font Awesome -->
+    <!--! Font Awesome -->
     <script
       src="https://kit.fontawesome.com/77380724c1.js"
       crossorigin="anonymous"
     ></script>
-    <!-- Main Script File -->
-    <script type="text/javascript" src="./script/script.js"></script>
-    <!-- Box Icons -->
+    <!--TODO Email JS
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      window.onload = () => {
+        emailjs.init("7ayvEk0J2UudqMQ8m");
+      };
+    </script> -->
+    <!--! Main Script File -->
+    <script src="./script/script.js"></script>
+    <!--! Box Icons -->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   </body>
 </html>
