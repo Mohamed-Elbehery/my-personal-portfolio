@@ -52,7 +52,7 @@ $(document).ready(() => {
       Username: "dev.elbehery@gmail.com",
       Password: "61D57C9487D1BC488625AF4557DC5962A8A0",
       To: "dev.elbehery@gmail.com",
-      From: userQuery.email,
+      From: "dev.elbehery@gmail.com",
       Subject: "New Contact Query",
       Body: `Name: ${userQuery.name} <br /> Email: ${userQuery.email} <br /> Message: ${userQuery.message} <br />`,
     })
