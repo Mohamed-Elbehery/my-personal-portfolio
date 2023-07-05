@@ -52,6 +52,7 @@ li {
 article {
   padding: 2rem;
   display: none;
+  margin-bottom: 2rem;
 }
 
 .main-title h1 {
